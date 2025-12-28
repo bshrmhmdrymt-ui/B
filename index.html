@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الكرة</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- ✅ القائمة الرئيسية -->
+    <div id="mainMenu" class="menu-buttons">
+      <button onclick="showStore()"> المتجر</button>
+      <button onclick="showLevels()"> المراحل</button>
+    </div>
+
+    <!-- ✅ شاشة المتجر -->
+    <div id="store" class="screen" style="display:none;">
+      <h2>🛒 المتجر</h2>
+      <div class="skins-grid">
+        <canvas class="skin-preview" onclick="setSkin('diamond')" width="80" height="80"></canvas>
+        <canvas class="skin-preview" onclick="setSkin('fire')" width="80" height="80"></canvas>
+        <canvas class="skin-preview" onclick="setSkin('forest')" width="80" height="80"></canvas>
+        <canvas class="skin-preview" onclick="setSkin('rainbow')" width="80" height="80"></canvas>
+        <canvas class="skin-preview" onclick="setSkin('blackgold')" width="80" height="80"></canvas>
+        <canvas class="skin-preview" onclick="setSkin('electric')" width="80" height="80"></canvas>
+        <canvas class="skin-preview" onclick="setSkin('ice')" width="80" height="80"></canvas>
+        <canvas class="skin-preview" onclick="setSkin('cosmic')" width="80" height="80"></canvas>
+        <canvas class="skin-preview" onclick="setSkin('digital')" width="80" height="80"></canvas>
+      </div>
+      <br><br>
+      <button onclick="showMenu()">⬅️ رجوع</button>
+    </div>
+
+    <!-- ✅ شاشة المراحل -->
+    <div id="levels" class="screen" style="display:none;">
+      <h2>📑 المراحل</h2>
+      <div class="level-grid" id="levelGrid"></div>
+      <button onclick="showMenu()">⬅️ رجوع</button>
+    </div>
+
+    <!-- ✅ شاشة اللعبة -->
+    <div id="game" class="screen" style="display:none;">
+      <canvas id="gameCanvas" width="600" height="400"></canvas>
+      <div class="controls">
+        <button id="pauseBtn">⏸️ إيقاف مؤقت</button>
+        <button id="resumeBtn">▶️ استمرار</button>
+        <div id="info" style="display:flex; justify-content:center; gap:20px; margin-top:10px;">
+          <p id="enemyCount">الأعداء: 0</p>
+          <p id="score">النقاط: 0</p>
+          <p id=>الهدف 200000 نقطة</p>
+          <p id="timer">الوقت: 0 ثانية</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ✅ ربط الملفات -->
+  <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
